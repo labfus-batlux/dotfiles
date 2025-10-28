@@ -1,0 +1,51 @@
+[mgr]
+show_hidden = true
+sort_dir_first = true
+
+[input]
+# Case-insensitive fuzzy search for directories/files
+case_sensitive = false
+smart_case = true
+
+[opener]
+search = [
+	{ run = 'rg --color=always --line-number "$@" | head -100', desc = "Ripgrep search", block = true },
+]
+text = [
+	{ run = 'vim "$@"', desc = "Vim", block = true },
+]
+markdown = [
+	{ run = 'bat "$@"', desc = "Bat", block = true },
+]
+docx = [
+	{ run = 'doxx "$@"', desc = "Doxx", block = true },
+]
+html = [
+	{ run = 'hq "$@"', desc = "HQ", block = true },
+]
+
+[open]
+rules = [
+	{ mime = "text/markdown", use = "markdown" },
+	{ name = "*.md", use = "markdown" },
+	{ name = "*.docx", use = "docx" },
+	{ name = "*.html", use = "html" },
+	{ name = "*.htm", use = "html" },
+	{ name = "*.py", use = "text" },
+	{ name = "*.txt", use = "text" },
+	{ name = "*.lua", use = "text" },
+	{ name = "*.js", use = "text" },
+	{ name = "*.ts", use = "text" },
+	{ name = "*.json", use = "text" },
+	{ name = "*.toml", use = "text" },
+	{ name = "*.yaml", use = "text" },
+	{ name = "*.yml", use = "text" },
+	{ name = "*.sh", use = "text" },
+	{ name = "*.rs", use = "text" },
+	{ name = "*.go", use = "text" },
+	{ name = "*.c", use = "text" },
+	{ name = "*.cpp", use = "text" },
+	{ name = "*.h", use = "text" },
+	{ mime = "text/*", use = "text" },
+]
+

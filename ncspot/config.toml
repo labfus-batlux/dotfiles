@@ -1,0 +1,66 @@
+# ~/.config/ncspot/config.toml
+
+backend = "portaudio"
+
+default_keybindings = true
+use_nerdfont = false
+notify = false
+gapless = true
+shuffle = false
+repeat = "off"                # none/off | track | list/playlist/queue
+initial_screen = "library"
+
+[keybindings]
+# --- Views (no function keys) ---
+"1" = "focus queue"
+"2" = "focus search"
+"3" = "focus library"
+
+# --- Playback ---
+"Space" = "playpause"
+"Enter" = "play"
+"q"     = "quit"
+"Esc"   = "back"
+"n"     = "next"
+"p"     = "previous"
+
+# --- Navigation (vim-ish) ---
+"h" = "move left"
+"j" = "move down"
+"k" = "move up"
+"l" = "move right"
+"Shift+j"  = "move pagedown 1.0"
+"Shift+k"  = "move pageup 1.0"
+
+# Jump to top/bottom (workaround: big-step moves)
+"g" = "move up 9999"
+"G" = "move down 9999"
+
+"/" = "search"
+"?" = "help"
+
+# --- Dive into things (albums/artists/context) ---
+"o"     = "open"          # open selected item's detail/context
+"Right" = "open"
+"A"     = "open"          # quick way to “enter” from album list too
+
+# --- Queue controls ---
+"Backspace" = "queue"     # add selected to queue
+"a"         = "queue"     # extra queue key
+"d"         = "delete"    # remove selected (in queue view)
+"c"         = "clear"     # clear entire queue (queue view)
+
+# --- Volume ---
+"+" = "volume_up"
+"=" = "volume_up"
+"-" = "volume_down"
+"m" = "mute"
+
+# --- Library / Playlist actions ---
+"s"       = "save"            # save/like the SELECTED item to your library
+"S"       = "save current"    # save the CURRENTLY PLAYING item to your library
+"P"       = "add"             # add SELECTED track/album/etc. to a playlist (prompts)
+"Shift+P" = "add current"     # add CURRENT track to a playlist (prompts)
+
+# (Removed Ctrl+n/Ctrl+N search nav since it didn’t work / not needed)
+

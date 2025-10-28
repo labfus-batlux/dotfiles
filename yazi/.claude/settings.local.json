@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(/Users/charliesands/.config/nvim/lua/plugins/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

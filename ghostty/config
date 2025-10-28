@@ -1,0 +1,65 @@
+theme = Adventure
+
+# Window: nearly full-screen (clamped to screen), but not "fullscreen"
+# Use a very large grid so Ghostty clamps to screen; nudge position so it isn't flush.
+window-width = 255
+window-height = 70
+window-position-x = 20
+window-position-y = 14
+resize-overlay = never
+
+# Appearance
+macos-titlebar-style = tabs
+background-opacity = 0.15
+background-blur-radius = 2
+
+# Font
+font-size = 10
+font-family = "SF Mono"
+
+# === Your used keybinds only ===
+# cmd+d -> horizontal split to the right
+keybind = cmd+d=new_split:right
+
+# cmd+shift+d -> vertical split (down)
+keybind = cmd+shift+d=new_split:down
+
+# alt + vim movement between splits
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+keybind = alt+l=goto_split:right
+
+# alt+shift + vim to resize splits (10px steps)
+keybind = alt+shift+h=resize_split:left,10
+keybind = alt+shift+j=resize_split:down,10
+keybind = alt+shift+k=resize_split:up,10
+keybind = alt+shift+l=resize_split:right,10
+
+# Optional: zoom the current split (acts like a toggle)
+keybind = cmd+shift+f=toggle_split_zoom
+
+# Optional (corrected): font size binds using valid keys
+keybind = cmd+plus=increase_font_size:1
+keybind = cmd+minus=decrease_font_size:1
+keybind = cmd+0=reset_font_size
+
+# === Tabs ===
+# Open and close
+keybind = cmd+t=new_tab
+
+# Switch between tabs
+keybind = cmd+shift+[=previous_tab
+keybind = cmd+shift+]=next_tab
+
+# Directly jump to a tab (1–9)
+keybind = cmd+1=goto_tab:1
+keybind = cmd+2=goto_tab:2
+keybind = cmd+3=goto_tab:3
+keybind = cmd+4=goto_tab:4
+keybind = cmd+5=goto_tab:5
+keybind = cmd+6=goto_tab:6
+keybind = cmd+7=goto_tab:7
+keybind = cmd+8=goto_tab:8
+keybind = cmd+9=goto_tab:9
+

@@ -1,0 +1,5 @@
+[manager]
+
+keymap = [
+	{ on = [ "f", "g" ], run = '''shell 'read -p "Search pattern: " pattern && rg --color=always --line-number "$pattern" .' ''', desc = "Ripgrep search" },
+]
