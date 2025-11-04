@@ -1,7 +1,5 @@
 PROMPT="%F{green}%n%f · %F{cyan}%1~%f %# "
 
-source /Users/charliesands/.config/broot/launcher/bash/br
-
 function y() {
   local tmp="$(mktemp)"
   # Run yazi, store last directory into $tmp
@@ -12,4 +10,13 @@ function y() {
   rm -f "$tmp"
 }
 
-source ~/.cargo/env
+function lx() {
+  local count=${1:-10}
+  ls -t | head -n $count
+}
+
+for i in {1..50}; do
+  eval "alias lx${i}='lx ${i}'"
+done
+
+
